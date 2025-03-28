@@ -9,6 +9,8 @@ import { EmptyTodos } from '../EmptyTodos';
 import { CreateTodoButton } from '../CreateTodoButton';
 import { TodoForm } from '../TodoForm';
 import { Modal } from '../Modal';
+import { TodoFormDeleteTodo } from '../TodoFormDeleteTodo';
+import { ModalDeleteTodo } from '../ModalDeleteTodo';
 import { TodoContext } from '../TodoContext';
 
 function AppUI() {
@@ -20,6 +22,8 @@ function AppUI() {
     deleteTodo,
     openModal,
     setOpenModal,
+    openModalDeleteTodo, 
+    setOpenModalDeleteTodo
   } = React.useContext(TodoContext);
   
   return (
@@ -45,6 +49,7 @@ function AppUI() {
             completed={todo.completed}
             onComplete={() => completeTodo(todo.text)}
             onDelete={() => deleteTodo(todo.text)}
+            setOpenModalDeleteTodo={setOpenModalDeleteTodo}
           />
         ))}
       </TodoList>
@@ -58,6 +63,14 @@ function AppUI() {
           <TodoForm />
         </Modal>
       )}
+      
+      {/* se muestra si si open modal es true */}
+      {openModalDeleteTodo && (
+        <ModalDeleteTodo>
+          <TodoFormDeleteTodo />
+        </ModalDeleteTodo>
+      )}
+
     </>
   );
 }

@@ -15,7 +15,7 @@ function TodoItem(props) {
       </p>
 
       <DeleteIcon
-        onDelete={props.onDelete}
+        setOpenModalDeleteTodo ={props.setOpenModalDeleteTodo}
       />
     </li>
   );
