@@ -20,8 +20,8 @@
 }
 
 .Icon-container-delete {
-  position: absolute;
-  top: -24px;
+  position: relative;
+  /* top:px; */
   right: 0;
 }
 .Icon-container-delete:hover {

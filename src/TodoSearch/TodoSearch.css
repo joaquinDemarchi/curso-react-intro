@@ -1,12 +1,12 @@
 .TodoSearch {
   background: #F9FBFC;
-  border-radius: 2px;
-  border: 2px solid #202329;
+  border-radius: 5px;
+  border: 0px solid #202329;
   margin: 0px auto;
   display: block;
   height: 64px;
   width: calc(100% - 100px);
-  max-width: 900px; /* Opcional: limita el ancho máximo */
+  max-width: 900px; 
   font-size: 24px;
   text-align: center;
   font-family: 'Montserrat';
